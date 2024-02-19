@@ -1,0 +1,12 @@
+{
+  "plugins": ["prettier-plugin-tailwindcss"],
+  "tabWidth": 2,
+  "overrides": [
+    {
+      "files": ["*.js", "*.ts", "*.tsx"],
+      "options": {
+        "singleQuote": true
+      }
+    }
+  ]
+}
