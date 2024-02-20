@@ -6,35 +6,45 @@ function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <div className="flex flex-col items-center gap-3 pt-20">
-      <div className="flex gap-5">
+    <div className="flex flex-col items-center gap-7 pt-20">
+      <div className="flex gap-8">
         <a
           href="https://vitejs.dev"
           target="_blank"
           className="flex items-center"
         >
-          <img src={viteLogo} alt="Vite logo" className="w-14" />
+          <img
+            src={viteLogo}
+            alt="Vite logo"
+            className="w-20 hover:drop-shadow-[0_15px_15px_rgba(186,55,254,0.4)]"
+          />
         </a>
         <a
           href="https://react.dev"
           target="_blank"
           className="flex items-center"
         >
-          <img src={reactLogo} alt="React logo" className="w-14" />
+          <img
+            src={reactLogo}
+            alt="React logo"
+            className="w-20 hover:drop-shadow-[0_15px_15px_rgba(0,216,255,0.4)]"
+          />
         </a>
       </div>
 
-      <h1 className="my-3 text-3xl">Vite + React</h1>
+      <h1 className="my-3 text-5xl">Vite + React</h1>
 
       <button
         onClick={() => setCount((count) => count + 1)}
-        className="rounded px-4 py-1 hover:bg-zinc-100"
+        className="rounded border-b-2 border-stone-500 bg-stone-200 px-4 py-1 text-stone-950 hover:bg-stone-100 active:border-stone-300 active:bg-stone-300"
       >
         count is {count}
       </button>
 
       <p>
-        Edit <code>src/App.tsx</code> and save to test HMR
+        Edit{' '}
+        <code className="rounded bg-stone-700 px-1 font-mono">src/App.tsx</code>{' '}
+        and save to test HMR
       </p>
 
       <p className="text-gray-400">
