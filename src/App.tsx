@@ -32,11 +32,13 @@ function App() {
         </a>
       </div>
 
-      <h1 className="my-3 text-5xl">Vite + React</h1>
+      <h1 className="my-3 rounded-br-xl rounded-tl-xl bg-gradient-to-r from-yellow-600 to-orange-600 px-5 py-3 text-5xl text-orange-50 drop-shadow-[5px_5px_0px_rgba(124,45,18,1)]">
+        Vite + React
+      </h1>
 
       <button
-        onClick={() => setCount((count) => count + 1)}
-        className="rounded border-b-2 border-stone-500 bg-stone-200 px-4 py-1 text-stone-950 hover:bg-stone-100 active:border-stone-300 active:bg-stone-300"
+        onClick={() => setCount(count + 1)}
+        className="rounded-md border-t-[2px] border-t-orange-300 bg-orange-500 px-4 py-2 text-orange-100 drop-shadow-[0_7px_0px_rgba(154,52,18,1)] active:relative active:top-[4px] active:drop-shadow-[0_3px_0px_rgba(154,52,18,1)]"
       >
         count is {count}
       </button>
