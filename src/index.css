@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gluten&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -16,5 +17,29 @@
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+  }
+
+  .font-gluten {
+    font-family: "Gluten", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+  }
+
+  .animate-shadow-blinking {
+    animation: shadow-blinking 1000ms infinite;
+  }
+
+  @keyframes shadow-blinking {
+    0% {
+      filter: drop-shadow(5px -5px 1px rgba(126, 34, 206, 0.6));
+    }
+    50% {
+      filter: drop-shadow(-5px 5px 1px rgba(126, 34, 206, 0.6));
+    }
+    100% {
+      filter: drop-shadow(5px -5px 1px rgba(126, 34, 206, 0.6));
+    }
   }
 }
