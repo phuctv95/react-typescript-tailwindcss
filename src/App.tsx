@@ -2,8 +2,9 @@ import { useState } from 'react';
 import { Showcase1 } from './Showcase-1';
 import { NavigationItemData } from './models/navigation-item-data';
 import { NavigationItem } from './NavigationItem';
+import { Showcase2 } from './Showcase-2';
 
-const initialItems = [
+const initialItems: NavigationItemData[] = [
   {
     id: crypto.randomUUID(),
     text: '1',
@@ -14,6 +15,7 @@ const initialItems = [
     id: crypto.randomUUID(),
     text: '2',
     isSelected: false,
+    content: Showcase2,
   },
   {
     id: crypto.randomUUID(),
@@ -24,7 +26,7 @@ const initialItems = [
 
 function App() {
   const [selectedItem, setSelectedItem] = useState<NavigationItemData>(
-    initialItems[0],
+    initialItems[1],
   );
   const [navigationItems, setNavigationItems] =
     useState<NavigationItemData[]>(initialItems);
