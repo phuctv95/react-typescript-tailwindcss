@@ -8,28 +8,27 @@ const initialItems: NavigationItemData[] = [
   {
     id: crypto.randomUUID(),
     text: '1',
-    isSelected: true,
     content: Showcase1,
   },
   {
     id: crypto.randomUUID(),
     text: '2',
-    isSelected: false,
     content: Showcase2,
   },
   {
     id: crypto.randomUUID(),
     text: '3',
-    isSelected: false,
   },
 ];
 
 function App() {
-  const [selectedItem, setSelectedItem] = useState<NavigationItemData>(
-    initialItems[1],
+  const [selectedItemId, setSelectedItemId] = useState<string>(
+    initialItems[0].id,
   );
   const [navigationItems, setNavigationItems] =
     useState<NavigationItemData[]>(initialItems);
+
+  const selectedItem = navigationItems.find((x) => x.id === selectedItemId);
 
   return (
     <div className="flex h-screen flex-col">
@@ -38,7 +37,7 @@ function App() {
           <NavigationItem
             key={item.id}
             text={item.text}
-            isSelected={item.isSelected}
+            isSelected={item.id === selectedItemId}
             onClick={() => {
               setNavigationItems(
                 navigationItems.map((x) => ({
@@ -46,7 +45,7 @@ function App() {
                   isSelected: x.id === item.id,
                 })),
               );
-              setSelectedItem(item);
+              setSelectedItemId(item.id);
             }}
           />
         ))}
